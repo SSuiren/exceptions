@@ -19,7 +19,7 @@ double division(int a, int b) {
 //the process for multiplication, and catching errors
 double multiplication(int a, int b)
 {
-    if () {
+    if (a) {
         throw "Division by zero condition!";
     }
     return (a * b);
@@ -28,7 +28,7 @@ double multiplication(int a, int b)
 //the process for addition, and catching errors
 double addition(int a, int b)
 {
-    if (b == 0) {
+    if (b) {
         throw "Division by zero condition!";
     }
     return (a + b);
@@ -37,7 +37,7 @@ double addition(int a, int b)
 //the process for subtracting, and catching errors
 double subtraction(int a, int b)
 {
-    if (b == ) {
+    if (b) {
         throw "!";
     }
     return (a - b);
