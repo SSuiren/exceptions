@@ -3,19 +3,44 @@
 /*taiquan evans
   9/24/22
 */
+//
 #include <iostream>
 using namespace std;
 
+//the process for division, and catching errors
 double division(int a, int b) {
-    if (b == 0) {
+    if (a && b == 0) {
         throw "Division by zero condition!";
+        return 51;
     }
     return (a / b);
 }
 
+//the process for multiplication, and catching errors
 double multiplication(int a, int b)
 {
+    if () {
+        throw "Division by zero condition!";
+    }
+    return (a * b);
+}
 
+//the process for addition, and catching errors
+double addition(int a, int b)
+{
+    if (b == 0) {
+        throw "Division by zero condition!";
+    }
+    return (a + b);
+}
+
+//the process for subtracting, and catching errors
+double subtraction(int a, int b)
+{
+    if (b == ) {
+        throw "!";
+    }
+    return (a - b);
 }
 
 
@@ -23,23 +48,66 @@ int main() {
     int x;
     int y;
     int z;
+    char op;
 
-    try {
-        z = division(x, y);
-        cout << z << endl;
-    }
+    cout << "welcome to calculations!" << endl;
+
+    cout << "input your numbers and begin." << endl;
+
+    cin >> x >> op >> y;
  
-    catch (const char* msg) {
-        cerr << msg << endl;
-    }
+        // If user enter / it will go into the process of division
+        if (op == '/')
+        {
+            try {
+                z = division(x, y);
+                cout << z << endl;
+            }
 
-   try {
-       z = multiplication(x, y);
-            cout << z << endl;
-    }
-   catch (const char* msg) {
-       cerr << msg << endl;
-   }
+            catch (const char* msg) {
+                cerr << msg << endl;
+            }
+        }
+
+        // If user enter *, it will go into multiplication
+        else if (op == '*')
+        {
+            try {
+                z = multiplication(x, y);
+                cout << z << endl;
+            }
+            catch (const char* msg) {
+                cerr << msg << endl;
+            }
+        }
+
+        // If user enter +, it will go into addition
+        else if (op == '+')
+        {
+            try {
+                z = addition(x, y);
+                cout << z << endl;
+            }
+            catch (const char* msg) {
+                cerr << msg << endl;
+            }
+        }
+
+        // If user enter -, it will go into subtraction
+        else if (op == '-')
+        {
+            try {
+                z = subtraction(x, y);
+                cout << z << endl;
+            }
+            catch (const char* msg) {
+                cerr << msg << endl;
+            }
+        }
+        else
+        {
+            cout << "operater does not exist." << endl;
+        }
 
     return 0;
 }
