@@ -52,8 +52,9 @@ int main() {
 
     cout << "welcome to calculations!" << endl;
 
+retry:
     cout << "input your numbers and begin." << endl;
-
+    //allows user input
     cin >> x >> op >> y;
  
         // If user enter / it will go into the process of division
@@ -104,9 +105,11 @@ int main() {
                 cerr << msg << endl;
             }
         }
+        // tells user to try again and moves you back
         else
         {
             cout << "operater does not exist." << endl;
+            goto retry;
         }
 
     return 0;
